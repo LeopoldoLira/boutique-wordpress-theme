@@ -1,0 +1,23 @@
+.search-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .search-field{
+        border: none;
+        padding: 0.75rem 0.75rem;
+        background-color: var(--white-color);
+        border-radius: 2rem 0 0 2rem;
+        outline: none;
+    }
+    .search-submit{
+        border: none;
+        background-color: var(--white-color);
+        padding: 0.75rem 0.75rem;
+        border-radius: 0 2rem 2rem 0;
+        cursor: pointer;
+        img{
+            width: 0.825rem;
+            // padding: 0.30rem 0.35rem;
+        }
+    }
+}

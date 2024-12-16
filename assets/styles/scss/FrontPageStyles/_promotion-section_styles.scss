@@ -1,0 +1,53 @@
+.promotion-section{
+    padding: 2rem 5rem;
+
+    &__heading{
+        padding: 5rem 0;
+        h2{
+            font-size: 3rem;
+            font-weight: 800;
+        }
+    }
+
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-ig{
+            picture{
+                img{
+                    width: 40rem;
+                    height: 30rem;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 0.5rem;
+                }
+            }
+
+            div{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            
+        }
+
+        &-promotion{
+            picture{
+                img{
+                    width: 40rem;
+                    height: 30rem;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 0.5rem;
+                }
+            }
+
+            div{
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}

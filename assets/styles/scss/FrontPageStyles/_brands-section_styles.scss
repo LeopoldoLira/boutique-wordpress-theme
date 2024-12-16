@@ -1,0 +1,29 @@
+
+.brands-slider{
+    background-color: var(--background-color);
+    padding: 2rem 3rem;
+
+    &__track{
+        width: 100%;
+        display: flex;
+        gap: 5rem;
+        overflow: hidden;
+
+        &-slide{
+            img{
+                width: 100px;
+                height: 100px;
+                object-fit: contain;
+                object-position: center;
+                animation: scroll 60s linear infinite;
+            }
+        }
+    }
+
+}
+
+
+@keyframes scroll {
+    0% {  transform: translateX(0%);  }
+    100% { transform: translateX(-1000%) }
+}

@@ -1,0 +1,78 @@
+.catalogue-container {
+    padding: 10rem 2rem 5rem 2rem;
+    display: grid;
+    grid-template-areas: 
+        'nav content';
+    grid-template-columns: 15vw 1fr;
+    position: relative;
+    background-color: var(--primary-color);
+
+    aside {
+        grid-area: nav;
+        position: fixed; // Make the sidebar fixed
+        top: 12rem; // Adjust top as per your needs
+        left: 2rem; // Adjust left as per your needs
+        width: 15vw; // Ensure the width matches the grid-template-columns
+        height: 100%; // Full height of the viewport
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    &__products {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 0rem 2rem;
+        row-gap: 3rem;
+        overflow-y: auto; // Enable vertical scrolling
+        max-height: calc(100vh - 15rem); // Adjust the height to fit the viewport minus padding
+
+         // Custom scrollbar for WebKit browsers
+         &::-webkit-scrollbar {
+            width: 8px; // Adjust width to make it less thick
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: var(--primary-color); // Match the background color
+            border-radius: 10px; // Rounded border for the track
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--accent-color); // Thumb color
+            border-radius: 10px; // Rounded border for the thumb
+            border: 2px solid var(--primary-color); // Border to create padding effect
+        }
+
+        // Custom scrollbar for Firefox
+        scrollbar-width: thin; // Less thick scrollbar
+        scrollbar-color: var(--accent-color) var(--primary-color); // Thumb and track colors
+
+        article {
+            a {
+                img {
+                    width: 250px;
+                    height: 350px;
+                    object-fit: cover;
+                    border-radius: 1rem;
+                    border: 1px solid rgb(0, 0, 0, 0.05);
+                }
+            }
+        }
+
+        div {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h2 {
+                width: 70%;
+                font-size: 1rem;
+            }
+            span {
+                color: var(--accent-color);
+                font-weight: 600;
+            }
+        }
+    }
+}
